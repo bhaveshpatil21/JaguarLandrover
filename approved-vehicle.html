@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>Land rover 3.0</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+<link href="css/lr_theme.css" rel="stylesheet">
+<link href="plugins/selectbox/lrselect.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css
+" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<!-- <link href="css/custom.css" rel="stylesheet" > -->
+<link href="css/landrover_fonts.css" rel="stylesheet">
+<link href="css/lr_icomoon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link href="verticalslide/verticalslide.css" rel="stylesheet">-->
+<link href="img/favicon-landrover.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="img/favicon-landrover-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+<link href="css/style.css" rel="stylesheet">
+	
+<style>
+	.compare-select>.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: 27px !important;
+    text-align: left;
+    font-size: 10px;
+    color: #6c757d !important;
+}
+	
+	</style>
+	
+	
+</head>
+<body class="body-margin ">
+<nav class="navbar py-0 fixed-top navbar-expand-lg navbar-light bg-white" > 
+  <!-- ===========mobile-view rightnav start================ --> 
+  <div class="mobile-nav d-block d-md-none row">
+    <table width="100%" border="0">
+      <tbody>
+       <tr>
+          <td width="52px"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon" style="
+           
+           margin-top: 8px;
+           font-size: 12px;
+       
+       "></span> </button></td>
+          <td width="60px"><a class="navbar-brand" href="javascript:void(0);"><img src="img/lr_logo2.png" width="70" height="" alt="landrover logo" style="
+           min-width: 70px;
+       "></a></td>
+          <td width="90%"><!-- <a onclick="on()" class="" href="javascript:void(0);"><h6>Vehicles</h6></a> --></td>
+          <td><!-- <button class="bg-border-none" aria-current="page"  data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-find-a-retailer"></span></btton> --></td>
+          <td><!-- <button class="bg-border-none" aria-current="page"  data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-phone"></span></button> --></td>
+          <td><button class="bg-border-none pr-3" type="button" id="dropdownMenuButton2x1" data-bs-toggle="dropdown" aria-expanded="false"> <span class="icon-ldx-login icon-size "></span> </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton2x1" style="
+           right: 0;
+           left: auto;
+       ">
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModal">Customer Login</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModa2">Retailer Login</a></li>
+            </ul></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="">
+      <div class="collapse navbar-collapse  border-top" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-0 mb-lg-0 nav-menu-link">
+          <li class="nav-item " id=""> <a onclick="on()"  class="nav-link  btn btn-outline-secondary " href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"> New Vehicle</a> </li>
+          <li class="nav-item " id=""> <a  class="nav-link  btn btn-outline-secondary " href="javascript:void(0);"> Pre-Owned Vehicle</a> </li>
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-light">
+          <li class="nav-item border-0"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-view-vehicles"></span> Land Rover</a> </li>
+          <li class="nav-item border-0"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-find-a-retailer"></span> Ace Parkin, Pune </a> </li>
+          <li class="nav-item border-0"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-phone"></span> Contact Us </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- ===========mobile-view rightnav end================ -->
+  <div class="container-fluid  d-none d-md-flex"> <a class="navbar-brand" href="javascript:void(0);"><img src="img/lr_logo2.png" width="94" height="" alt="landrover logo"/></a>
+    <div class="m-menu-title d-none">
+      <h2>Range Rover Evoque</h2>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item " id="vehicle-mobile-list"> <a onclick="on()" class="nav-link  btn btn-outline-secondary " href="javascript:void(0);"> New Vehicle</a> </li>
+        <li class="nav-item " id=""> <a  class="nav-link  btn btn-outline-secondary " href="javascript:void(0);"> Pre-Owned Vehicle</a> </li>
+      </ul>
+      <ul class="navbar-nav d-none d-md-flex mb-2 mb-lg-0 nav-item-right ">
+        <li class="nav-item"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" ><span class="icon icon-ldx-view-vehicles"></span> <small class="text-capitalize">Land Rover</small></a> </li>
+        <li class="nav-item"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-find-a-retailer"></span> <small class="text-capitalize">Select a retailer</small></a> </li>
+        <li class="nav-item"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-phone"></span> <small class="text-capitalize">Contact Us</small></a> </li>
+        <li class="nav-item dropdown ">
+          <div class="dropdown">
+            <button class="nav-link btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"> <span class="icon-ldx-login"></span><small class="text-capitalize">Login</small> </button>
+            <ul class="dropdown-menu dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModal">Customer Login</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModa2">Retailer Login</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="allvehicle" onclick="off()" class="row allvehicle">
+  <ul class="vehicle_list border-right p-0">
+    <li>
+      <h6 class="dropdown-header bg-light">RANGE ROVER FAMILY <span class="float-end" ><i class="icon-lr-configurator-close fs-6"></i></span></h6>
+    </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_1.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER EVOQUE</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_2.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER VELAR</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_3.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER SPORT</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_4.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li>
+      <h6 class="dropdown-header bg-light">DISCOVERY FAMILY</h6>
+    </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_5.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>DISCOVERY SPORT </h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" class="img-fluid" src="img/img_6.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>DISCOVERY </h6>
+        </div>
+      </div>
+      </a> </li>
+    <li>
+      <h6 class="dropdown-header bg-light">DEFENDER FAMILY</h6>
+    </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_6.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>DEFENDER </h6>
+        </div>
+      </div>
+      </a> </li>
+  </ul>
+</div>
+<div class="container mt-2 " id="card_cont">
+  <div class="row  ">
+    <div class="pb-3">
+      <button class="btn btn-link p-0 align-items-center text-capitalize fw-bold d-flex pl-3" onclick="history.back()" type="button" style="text-decoration-line: inherit;"> <i class="icon-lr-configurator-cheveron-right pr-1"></i>Back </button>
+      
+		
+		<div class="card-group ">
+  <div class="card border border-5 m-2 pb-3 shadow 	 bg-body rounded ">
+    <img src="img/approved_car_img_1.jpg" class="card-img-top" alt="...">
+    <div class="card-body px-0  pb-3 shadow 	 bg-body rounded">
+                           <div class="ml-4">
+                              <div class="row modelnameRow">
+                                 <div class="col-12">
+                                    <h5 class="mb-3">Range Rover Evoque R-Dynamic SE</h5>
+                                 </div>
+                              </div>
+                              <div class="row mb-0 grid-show media-body">
+                                	     <div class="col-6">
+                                    <div class="media pr-1	">
+                                       <h4 >
+                             <span class=" fa fa-inr pl-2"></span>
+                              </h4>
+                                       <div class="media-body pl-1">
+                                          <h6>Retail price </h6>
+                                          <p class="h6"><small>52 00 000</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                  <div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                                 <span class="icon icon-ldx-find-a-retailer"></span>
+                                    </h4>
+                                       <div class="media-body">
+                                          <h6>Location </h6>
+                                          <p class=""><small>Bangalore</small></p>
+                                       </div>
+                                    </div>
+                                    
+                                 </div>
+                               </div>
+                              <div class="row pb-2">
+                                 <!--<div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class="icon-J_My_Garage"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h5>Engine Type</h5>
+                                          <p class="h6"><small> 2000</small></p>
+                                       </div>
+                                    </div>
+                                 </div>-->
+                                 <div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                             <span class=" icon-Jlr_Mileage"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Kilometers </h6>
+                                          <p class="h6"><small>13 610</small></p>
+                                       </div>
+                                    </div>
+                                    
+                                 </div>
+                                 <div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class=" icon icon-calendar"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Model year</h6>
+                                          <p class="h6"><small>2020</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                  <div class="col-6 mt-2">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class="icon-lr-configurator-exterior"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Exterior Colour</h6>
+                                          <p><small>Santorini Black  </small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-6 mt-2">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class="  icon-Jlr_Fuel"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Fuel</h6>
+                                          <p class="h6"><small>Petrol</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              
+                            
+                              
+                              <!-- end of card reveal -->
+                           </div>
+                   
+    </div>
+   <div class="card-footer bg-white   border-0 p-0 text-center">
+      <button type="button" class="btn btn-primary w-75" onclick="window.location.href='approved_page.html'">SELECT VEHICLE</button>
+    </div>
+  </div>
+  <div class="card border border-5 m-2 pb-3 shadow 	 bg-body rounded">
+    <img src="img/approved_car_img_2.png" class="card-img-top" alt="...">
+    <div class="card-body px-0 col-12 ">
+                           <div class="ml-4">
+                              <div class="row modelnameRow">
+                                 <div class="col-12">
+                                    <h5 class="mb-3">Range Rover Evoque R-Dynamic SE</h5>
+                                 </div>
+                              </div>
+                              <div class="row mb-0 grid-show">
+                                	     <div class="col-6">
+                                    <div class="media">
+                                       <h4 >
+                             <span class=" fa fa-inr pl-2"></span>
+                              </h4>
+                                       <div class="media-body pl-1">
+                                          <h6>Retail price </h6>
+                                          <p class="h6"><small>52 00 000</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+								  
+                                 <div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                                 <span class="icon icon-ldx-find-a-retailer"></span>
+                                    </h4>
+                                       <div class="media-body">
+                                          <h6>Location </h6>
+                                          <p><small>Mumbai</small></p>
+                                       </div>
+                                    </div>
+                                    
+                                 </div>
+                              </div>
+                              <div class="row pb-2">
+                                 <!--<div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class="icon-J_My_Garage"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h5>Engine Type</h5>
+                                          <p class="h6"><small> 2000</small></p>
+                                       </div>
+                                    </div>
+                                 </div>-->
+                                 <div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                             <span class=" icon-Jlr_Mileage"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Kilometers </h6>
+                                          <p class="h6"><small>17 010</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class=" icon icon-calendar"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Model year</h6>
+                                          <p class="h6"><small>2021</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                  <div class="col-6 mt-2">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class="icon-lr-configurator-exterior"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Exterior Colour</h6>
+                                          <p><small>Firenze Red   </small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-6 mt-2">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class="  icon-Jlr_Fuel"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Fuel</h6>
+                                          <p class="h6"><small>Petrol</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              
+                            
+                              
+                              <!-- end of card reveal -->
+                           </div>
+                  
+    </div>
+	  	 
+    <div class="card-footer bg-white   border-0 p-0 text-center">
+      <button type="button" class="btn btn-primary w-75" onclick="window.location.href='approved_page.html'">SELECT VEHICLE</button>
+    </div>
+
+  </div>
+<div class="card border border-5 m-2 pb-3 shadow 	 bg-body rounded">
+    <img src="img/approved_car_img_2.jpg" class="card-img-top" alt="...">
+    <div class="card-body px-0 col-12 ">
+                           <div class="ml-4">
+                              <div class="row modelnameRow">
+                                 <div class="col-12">
+                                    <h5 class="mb-3">Range Rover Evoque R-Dynamic SE</h5>
+                                 </div>
+                              </div>
+                              <div class="row mb-0 grid-show">
+                                	    <div class="col-6">
+                                    <div class="media">
+                                       <h4 >
+                             <span class=" fa fa-inr pl-2"></span>
+                              </h4>
+                                       <div class="media-body pl-1">
+                                          <h6>Retail price </h6>
+                                          <p class="h6"><small>52 00 000</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                                 <span class="icon icon-ldx-find-a-retailer"></span>
+                                    </h4>
+                                       <div class="media-body">
+                                          <h6>Location </h6>
+                                          <p><small>Indore</small></p>
+                                       </div>
+                                    </div>
+                                    
+                                 </div>
+                              </div>
+                              <div class="row pb-2">
+                                 <!--<div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class="icon-J_My_Garage"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h5>Engine Type</h5>
+                                          <p class="h6"><small> 2000</small></p>
+                                       </div>
+                                    </div>
+                                 </div>-->
+                                 <div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                             <span class=" icon-Jlr_Mileage"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Kilometers </h6>
+                                          <p class="h6"><small>20 255</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-6">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class=" icon icon-calendar"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Model year</h6>
+                                          <p class="h6"><small>2019</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                  <div class="col-6 mt-2">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class="icon-lr-configurator-exterior"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Exterior Colour</h6>
+                                          <p><small>Fuji white   </small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-6 mt-2">
+                                    <div class="media">
+                                       <h4 class="pr-1">
+                              <span class="  icon-Jlr_Fuel"></span>
+                              </h4>
+                                       <div class="media-body">
+                                          <h6>Fuel</h6>
+                                          <p class="h6"><small>Petrol</small></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              
+                            
+                              
+                              <!-- end of card reveal -->
+                           </div>
+                  
+    </div>
+	  	 
+    <div class="card-footer bg-white   border-0 p-0 text-center">
+      <button type="button" class="btn btn-primary w-75" onclick="window.location.href='approved_page.html'">	SELECT VEHICLE</button>
+    </div>
+
+  </div>
+</div>
+      
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+      <!-- DEBUG-VIEW ENDED 1 APPPATH/Views/compare/ajax/compare_card.php --> 
+      
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script> 
+<script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity=""  crossorigin="anonymous"></script> 
+<script  src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"  integrity=""  crossorigin="anonymous"></script> 
+<script>
+$(function() {
+    $('.lr-select').select2({
+      minimumResultsForSearch: Infinity
+    });
+
+    
+});
+
+</script> 
+<script type="text/javascript">
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script> 
+<script type="text/javascript">
+  function on() {
+  document.getElementById("allvehicle").style.display = "block";
+}
+
+function off() {
+  document.getElementById("allvehicle").style.display = "none";
+}
+</script> 
+<script>  
+  function toggle_tradein(action_type)
+      {
+          if(action_type == 'show')
+              {
+                    $("#TradeIn").fadeIn();
+                  $("#NoThanks").fadeOut();
+                 // $("#estimationvalue").hide();
+              }
+          else {
+              $("#TradeIn").fadeOut();
+              $("#NoThanks").fadeIn();
+             // $("#estimationvalue").hide();
+          }
+      }
+      
+    </script> 
+<script>  
+  function toggle_financeoption(action_type)
+      {
+          if(action_type == 'show')
+              {
+                    $("#FinanceOption").fadeIn();
+                  $("#Fullpayment").fadeOut();
+              }
+          else {
+              $("#FinanceOption").fadeOut();
+              $("#Fullpayment").fadeIn();
+          }
+      }
+      
+    </script> 
+<script>
+      $('div').on("click",function(){
+      $(window).scrollTop(300);
+});
+    </script>
+</body>
+</html>

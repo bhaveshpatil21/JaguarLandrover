@@ -1,0 +1,93 @@
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 100% !important;
+}
+
+
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 34px !important;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #9b9b9b !important;
+    border-radius: 8px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 34px !important;
+}
+
+.select2-results__option {
+    padding: 6px;
+    user-select: none;
+    -webkit-user-select: none;
+    border-top: 1px solid #dddddd !important;
+    font-size: 11px;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #0c121b !important;
+    color: white;
+}
+
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: none !important;
+    border-style: none !important;
+    border-width: none !important;
+    height: 0;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    font-size: 14px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b::before {
+    content: "\e931";
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 0;
+    -webkit-font-smoothing: antialiased;
+    margin-left: -12px;
+    font-size: 12px;
+}
+
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #888 transparent;
+    border-width: 0 4px 5px 4px;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b::before{
+    content: "\e904";
+    margin-left: -6px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 26px;
+    position: absolute;
+    top: -1px !important;
+    right: 1px;
+    width: 20px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: 27px !important;
+    text-align: right;
+    font-size: 10px;
+    color: #6c757d !important;
+}

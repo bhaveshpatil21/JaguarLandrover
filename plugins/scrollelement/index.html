@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+   <style>
+      .largeBlock{ min-width: 300px; height:300px; border: 1px solid red;}      
+    </style>  
+  </head>
+  <body>
+	
+    <h1>Smooth Scroll without jQuery!</h1>   
+	<div id="anchor-toc">
+	<h2>Table of content (toc)</h2>
+	<ul>
+      <li><a href="#anchor-2" onclick="smoothScroll('anchor-2');">smooth scroll to Anchor 2<a/></li>
+	  <li><a href="#chapter-4" onclick="smoothScroll('chapter-4');">smooth scroll to Chapter 4<a/></li>
+    </ul>
+	</div>
+	
+    <h2 id="target-1">Chapter 1</h2>
+    <div class="largeBlock"> some text</div>
+    
+    
+    <h2 id="anchor-2">Anchor 2</h2>
+	<a href="#anchor-toc" onclick="smoothScroll('anchor-toc');">scroll smooth to toc<a/>
+    <div class="largeBlock">This is the textblock below anchor 2</div>
+    
+    
+    <h2>Chapter 3</h2>
+    <div class="largeBlock"> some content </div>
+    
+    
+    <h2 id="chapter-4">Chapter 4</h2>
+	<a href="#anchor-toc" onclick="smoothScroll('anchor-toc');">scroll smooth to toc<a/>
+    <div class="largeBlock"> This is the text of chapter 4</div>
+    
+    <h2>Chapter 5</h2>
+    <div class="largeBlock"> some content </div>
+	<h2>Chapter 6</h2>
+    <div class="largeBlock"> some content </div>
+	<a href="#anchor-toc" onclick="smoothScroll('anchor-toc');">scroll smooth to toc<a/>
+  </body>
+
+</html>

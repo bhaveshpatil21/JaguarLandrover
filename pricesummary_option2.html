@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>Land rover 3.0</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+<link href="css/lr_theme.css" rel="stylesheet">
+<link href="plugins/selectbox/lrselect.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css
+" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<!-- <link href="css/custom.css" rel="stylesheet" > -->
+<link href="css/landrover_fonts.css" rel="stylesheet">
+<link href="css/lr_icomoon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link href="verticalslide/verticalslide.css" rel="stylesheet">-->
+<link href="img/favicon-landrover.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="img/favicon-landrover-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body class="body-margin">
+<nav class="navbar py-0 fixed-top navbar-expand-lg navbar-light bg-white" > 
+  <!-- ===========mobile-view rightnav start================ -->
+  <div class="mobile-nav d-block d-md-none row">
+    <table width="100%" border="0">
+      <tbody>
+        <tr>
+          <td width="52px"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon" style="
+           
+           margin-top: 8px;
+           font-size: 12px;
+       
+       "></span> </button></td>
+          <td width="60px"><a class="navbar-brand" href="javascript:void(0);"><img src="img/lr_logo2.png" width="70" height="" alt="landrover logo" style="
+           min-width: 70px;
+       "></a></td>
+          <td width="90%"><!-- <a onclick="on()" class="" href="javascript:void(0);"><h6>Vehicles</h6></a> --></td>
+          <td><!-- <button class="bg-border-none" aria-current="page"  data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-find-a-retailer"></span></btton> --></td>
+          <td><!-- <button class="bg-border-none" aria-current="page"  data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-phone"></span></button> --></td>
+          <td><button class="bg-border-none pr-3" onclick="overlayon()"  type="button" id="dropdownMenuButton2x1" data-bs-toggle="dropdown" aria-expanded="false"> <span class="icon-ldx-login icon-size "></span> </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end menu-overlay" onclick="overlayoff()" aria-labelledby="dropdownMenuButton2x1" style="
+           right: 0;
+           left: auto;
+       ">
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModal">Customer Login</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModa2">Retailer Login</a></li>
+            </ul></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="">
+      <div class="collapse navbar-collapse  border-top" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-0 mb-lg-0 nav-menu-link">
+          <li class="nav-item " id=""> <a onclick="on()"  class="nav-link  btn btn-outline-secondary " href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"> New Vehicle</a> </li>
+          <li class="nav-item " id=""> <a  class="nav-link  btn btn-outline-secondary " href="javascript:void(0);"> Pre-Owned Vehicle</a> </li>
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-light">
+          <li class="nav-item border-0"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-view-vehicles"></span> Land Rover</a> </li>
+          <li class="nav-item border-0"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-find-a-retailer"></span> Ace Parkin, Pune </a> </li>
+          <li class="nav-item border-0"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-phone"></span> Contact Us </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- ===========mobile-view rightnav end================ -->
+  <div class="container-fluid  d-none d-md-flex"> <a class="navbar-brand" href="javascript:void(0);"><img src="img/lr_logo2.png" width="94" height="" alt="landrover logo"/></a>
+    <div class="m-menu-title d-none">
+      <h2>Range Rover Evoque</h2>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item " id="vehicle-mobile-list"> <a onclick="on()" class="nav-link  btn btn-outline-secondary " href="javascript:void(0);"> New Vehicle</a> </li>
+        <li class="nav-item " id=""> <a  class="nav-link  btn btn-outline-secondary " href="javascript:void(0);"> Pre-Owned Vehicle</a> </li>
+      </ul>
+      <ul class="navbar-nav d-none d-md-flex mb-2 mb-lg-0 nav-item-right ">
+        <li class="nav-item"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" ><span class="icon icon-ldx-view-vehicles"></span> <small class="text-capitalize">Land Rover</small></a> </li>
+        <li class="nav-item"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-find-a-retailer"></span> <small class="text-capitalize">Ace Parkin, Pune</small></a> </li>
+        <li class="nav-item"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-phone"></span> <small class="text-capitalize">Contact Us</small></a> </li>
+        <li class="nav-item dropdown ">
+          <div class="dropdown">
+            <button class="nav-link btn btn-outline-secondary dropdown-toggle " onclick="overlayon()"  type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"> <span class="icon-ldx-login"></span><small class="text-capitalize">Login</small> </button>
+            <ul class="dropdown-menu dropdown-menu dropdown-menu-lg-end menu-overlay" onclick="overlayoff()" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModal">Customer Login</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModa2">Retailer Login</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+ 
+
+</nav>
+<div id="overlay" onclick="overlayoff()"></div>
+<div id="allvehicle" onclick="off()" class="row allvehicle">
+  <ul class="vehicle_list border-right p-0">
+    <li>
+      <h6 class="dropdown-header bg-light">RANGE ROVER FAMILY <span class="float-end" onclick="off()" ><i class="icon-lr-configurator-close"></i></span></h6>
+    </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_1.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER EVOQUE</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_2.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER VELAR</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_3.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER SPORT</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_4.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li>
+      <h6 class="dropdown-header bg-light">DISCOVERY FAMILY</h6>
+    </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_5.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>DISCOVERY SPORT </h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" class="img-fluid" src="img/img_6.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>DISCOVERY </h6>
+        </div>
+      </div>
+      </a> </li>
+    <li>
+      <h6 class="dropdown-header bg-light">DEFENDER FAMILY</h6>
+    </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_6.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>DEFENDER </h6>
+        </div>
+      </div>
+      </a> </li>
+  </ul>
+</div>
+<div class="container-fluid fixed-top " style="    top: 73px; z-index: 1;">
+  <div class="row bg-white d-none d-md-flex  border-bottom align-items-center " style="height: 66px;">
+    <div class="col-lg-8 col-md-7">
+      <div class="row">
+        <div class="col-6">
+          <h5 style="
+    letter-spacing: 2px;
+">Range Rover Evoque</h5>
+          <p class="m-0">R-Dynamic SE</p>
+        </div>
+        <div class="col-6 text-right p-0"> 
+          <!-- <div class="btn-group sharesave-box" role="group" aria-label=""> <a href="Compare.html" type="button" class="btn btn-sm compare-save-icon ">
+            <h4 class="text-lowercase"><i class="icon-lr-custom-portal-compare"></i></h4>
+            compare</a> <a href="savedvechicle.html" type="button" class="btn btn-sm compare-save-icon ">
+            <h4><i class="icon-star-empty"></i></h4>
+            Save</a> <a href="javascript:void(0);" type="button" class="btn btn-sm compare-save-icon ">
+            <h4><i class="icon-ldx-share"></i></h4>
+            Share</a> </div> --> 
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-5 ">
+      <div class="row align-items-center">
+        <div class="col-6">
+          <button class="btn btn-link p-0 align-items-center text-capitalize fw-bold d-flex " onclick="history.back()" type="button" style="text-decoration-line: inherit;"> <i class="icon-lr-configurator-cheveron-right pr-1"></i>Back </button>
+        </div>
+        <div class="col-6 share-btn text-right">
+          <button type="button" class="btn btn-success sharenowbtn" data-bs-toggle="collapse" data-bs-target="#shareNow" aria-expanded="false" aria-controls="shareNow"><i class="icon-lr-custom-portal-more fs-6 s-dots" aria-hidden="true"></i> <i class="icon-LR_Filter_Close fs-6 s-close " aria-hidden="true"></i> </button>
+          <div class="collapse" id="shareNow" >
+            <div class="card card-body" style="
+    width: 209px;
+    text-align: left;
+">
+              <div class="list-group mt-5 hover-green"> <a href="#" class="list-group-item list-group-item-action border-0 d-flex align-items-center"> <i class="icon-lr-custom-portal-compare fs-6 mr-2"></i> Compare</a> <a href="#" class="list-group-item list-group-item-action border-0 d-flex align-items-center"> <i class="icon-star-empty fs-6 mr-2"></i> Save</a> <a href="#" class="list-group-item list-group-item-action border-0 d-flex align-items-center"><i class="icon-ldx-share fs-6 mr-2"></i> Share</a> <a href="#" class="list-group-item list-group-item-action border-0 d-flex align-items-center"> <i class="icon-ldx-phone fs-6 mr-2"></i> Request for call</a> <a href="#" class="list-group-item list-group-item-action border-0 d-flex align-items-center"> <i class="icon-lr-additional-car-tax-calculator fs-6 mr-2"></i> Email me quotation</a> <a href="#" class="list-group-item list-group-item-action border-0 d-flex align-items-center"> <i class="icon-ldx-view-vehicles fs-6 mr-2"></i> Book a test drive</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 col-md-7">
+        <div class="row bg-light">
+          <section class="p-0" style="
+">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item img-bg-box2  active" style="background-image: url(img/slide-img-1.png);
+            height: calc(100vh );"> 
+                  <!-- <img alt="" src="..." class="d-block w-100" alt="..."> --> 
+                </div>
+                <div class="carousel-item img-bg-box2" style="background-image: url(img/slide-img-2.png);
+            height: calc(100vh );"> 
+                  <!-- <img alt="" src="..." class="d-block w-100" alt="..."> --> 
+                </div>
+                <div class="carousel-item img-bg-box2" style="background-image: url(img/slide-img-3.png);
+            height: calc(100vh );"> 
+                  <!-- <img alt="" src="..." class="d-block w-100" alt="..."> --> 
+                </div>
+                <div class="carousel-item img-bg-box2" style="background-image: url(img/slide-img-4.png);
+            height: calc(100vh );"> 
+                  <!-- <img alt="" src="..." class="d-block w-100" alt="..."> --> 
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
+            </div>
+          </section>
+        </div>
+
+        <div class="row h-50">
+          <div class="col py-3 pl-0 pr-2">
+           <div class=" img-bg-box2thumb" style="background-image: url(img/slide-img-4.png);
+           height: calc(100vh );"> 
+           </div>
+          </div>
+          <div class="col py-3 pl-0 p-2">
+            <div class=" img-bg-box2thumb" style="background-image: url(img/slide-img-4.png);
+            height: calc(100vh );"> 
+            </div>
+           </div>
+          <div class="col-4 py-3 pl-2 pr-0" >
+            <div class=" img-bg-box2thumb" style="background-image: url(img/slide-img-4.png);
+            height: calc(100vh );"> 
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 content-height">
+        <section class=" my-3">
+          <div class="row right-div"> 
+            <!-- ===========order summary starts=============== -->
+            
+            <h5 class="pb-3"><span class="float-start"><strong>Order Summary</strong></span><span class="float-end d-flex text-capitalize">Review Specification  <i class="icon-ldx-download text-muted fs-6 pl-2"> </i></span></h5>
+            <div class="col-md-12">
+              
+              <div class="row border-bottom border-5 border-dark bg-light p-3 mb-3">
+                
+                <table width="100%" border="0" cellpadding="3" class="p-2">
+                  <tbody>
+                   
+                    <tr>
+                      <td align="left" valign="middle">Ex-showroom <span data-tooltip="This is the ex-showroom price " data-tooltip-location="right"><i class="   icon icon-ldx-information  "></i> </span></td>
+                      <td align="right" valign="middle"><i class="fa fa-inr"></i> 69 99 000</td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="middle">Option cost <span data-tooltip="This is a options ex-showroom price" data-tooltip-location="right"><i class="   icon icon-ldx-information ml-1 "></i> </span></td>
+                      <td align="right" valign="middle"><i class="fa fa-inr"></i> 1 00 000</td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="middle">Insurance <span data-tooltip="Comprehensive insurance charges for Range Rover Evoque" data-tooltip-location="right"><i class="   icon icon-ldx-information ml-1 "></i></span></td>
+                      <td align="right" valign="middle"><i class="fa fa-inr"></i> 3 88 712</td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="middle">Registration 
+                        <small class="text-muted">(Individual)</small> <i class="fs-6 fa fa-pencil" aria-hidden="true"> </i></td>
+                      <td align="right" valign="middle"><i class="fa fa-inr"></i> 10 05 617</td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="middle">TCS <span data-tooltip="Tax collected at source for Range Rover Evoque " data-tooltip-location="right"><i class=" icon icon-ldx-information ml-1 "></i></span></td>
+                      <td align="right" valign="middle"><i class="fa fa-inr"></i> 69 000</td>
+                    </tr>
+                    <tr>
+                      <th align="left" valign="middle">On road price</th>
+                      <th align="right" valign="middle" class="text-right"><i class="fa fa-inr"></i> 85 62 329</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- ===========order summary end=============== --> 
+            <!--===============trade-in start============-->
+            <div class="col-md-12 border-bottom pb-3">
+              <p class=""><strong>Do you have vehicle to exchange?</strong></p>
+              <div class="form-check form-check-inline px-3" onClick="toggle_tradein('hide')">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" checked value="option1">
+                <label class="form-check-label" for="inlineRadio1">No</label>
+              </div>
+              <div class="form-check form-check-inline px-3" onClick="toggle_tradein('show')">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Yes</label>
+              </div>
+            </div>
+            <section class="p-0">
+              <div id="NoThanks" class="col-md-12"></div>
+              <div id="TradeIn" class="col-md-12" style="display:none;">
+                <section>
+                  <p class="pt-2"><strong>Please specify vehicle to exchange</strong></p>
+                  <div class="row px-2 py-2">
+                    <div class="col-6 p-1">
+                      <label>Manufacturing year </label>                     
+                    </div>
+                    <div class="col-6 p-1">
+                      <select class="form-select lr-select" aria-label="Default select example">
+                        <option value="">Select</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                      </select>
+                    </div>
+                    <div class="col-6 p-1">
+                      <label>Manufacturer</label>
+                      </div>
+                      <div class="col-6 p-1">
+                      <select class="form-select lr-select" aria-label="Default select example">
+                        <option value="">Select</option>
+                        <option value="ASTON MARTIN">ASTON MARTIN</option>
+                        <option value="AUDI">AUDI</option>
+                        <option value="BENTLEY">BENTLEY</option>
+                        <option value="BMW">BMW</option>
+                        <option value="BYD">BYD</option>
+                        <option value="CITROEN">CITROEN</option>
+                        <option value="DATSUN">DATSUN</option>
+                        <option value="FERRARI">FERRARI</option>
+                        <option value="FORCE MOTORS">FORCE MOTORS</option>
+                        <option value="FORD">FORD</option>
+                        <option value="HONDA">HONDA</option>
+                        <option value="HYUNDAI">HYUNDAI</option>
+                        <option value="ISUZU">ISUZU</option>
+                        <option value="JAGUAR">JAGUAR</option>
+                        <option value="JEEP">JEEP</option>
+                        <option value="KIA">KIA</option>
+                        <option value="LAMBORGHINI">LAMBORGHINI</option>
+                        <option value="LAND ROVER">LAND ROVER</option>
+                        <option value="LEXUS">LEXUS</option>
+                        <option value="MAHINDRA">MAHINDRA</option>
+                        <option value="MARUTI SUZUKI">MARUTI SUZUKI</option>
+                        <option value="MASERATI">MASERATI</option>
+                        <option value="MCLAREN">MCLAREN</option>
+                        <option value="MERCEDES BENZ">MERCEDES BENZ</option>
+                        <option value="MG">MG</option>
+                        <option value="MINI">MINI</option>
+                        <option value="NISSAN">NISSAN</option>
+                        <option value="PORSCHE">PORSCHE</option>
+                        <option value="RENAULT">RENAULT</option>
+                        <option value="ROLLS ROYCE">ROLLS ROYCE</option>
+                        <option value="SKODA">SKODA</option>
+                        <option value="TATA">TATA</option>
+                        <option value="TOYOTA">TOYOTA</option>
+                        <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                        <option value="VOLVO">VOLVO</option>
+                      </select>
+                    </div>
+                  
+                    <div class="col-6 p-1">
+                      <label>Model</label>
+                    </div>
+                      <div class="col-6 p-1">
+                      <select class="form-select lr-select" aria-label="Default select example">
+                        <option value="">Select</option>
+                        <option value="A4">A4</option>
+                        <option value="A6">A6</option>
+                        <option value="A8 L">A8 L</option>
+                        <option value="E-TRON">E-TRON</option>
+                        <option value="E-TRON GT">E-TRON GT</option>
+                        <option value="Q2">Q2</option>
+                        <option value="Q5">Q5</option>
+                        <option value="Q8">Q8</option>
+                        <option value="RS 5">RS 5</option>
+                        <option value="RS Q8">RS Q8</option>
+                        <option value="RS7 SPORTBACK">RS7 SPORTBACK</option>
+                        <option value="S5 SPORTBACK">S5 SPORTBACK</option>
+                      </select>
+                    </div>
+                    <div class="col-6 p-1">
+                      <label>Variant</label>
+                    </div> 
+                      <div class="col-6 p-1"> 
+                      <select class="form-select lr-select" aria-label="Default select example">
+                        <option value="">Select</option>
+                        <option value="40 TFSI PREMIUM">40 TFSI PREMIUM</option>
+                        <option value="40 TFSI PREMIUM PLUS">40 TFSI PREMIUM PLUS</option>
+                        <option value="40 TFSI TECHNOLOGY">40 TFSI TECHNOLOGY</option>
+                      </select>
+                    </div>
+                  
+                    <div class="col-6 p-1">
+                      <label>No. of owners</label>
+                    </div>
+                      <div class="col-6 p-1">
+                      <select class="form-select lr-select" aria-label="Default select example">
+                        <option value="">Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                    </div>
+                    <div class="col-6 p-1">
+                      <label>Kilometers driven</label>
+                    </div>
+                      <div class="col-6 p-1">
+                      <select class="form-select lr-select" aria-label="Default select example">
+                        <option value="">Select</option>
+                        <option value="10000">1 - 10000</option>
+                        <option value="20000">10001 - 20000</option>
+                        <option value="30000">20001 - 30000</option>
+                        <option value="40000">30001 - 40000</option>
+                        <option value="50000">40001 - 50000</option>
+                        <option value="60000">50001 - 60000</option>
+                        <option value="70000">60001 - 70000</option>
+                        <option value="80000">70001 - 80000</option>
+                        <option value="90000">80001 - 90000</option>
+                        <option value="100000">90001 - 100000</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row px-2 my-2">
+                    <!-- <div class="col-6 p-1"> </div> -->
+                    <div class="col-12 p-1">
+                      <button type="button" class="btn btn-block btn-primary" data-bs-toggle="collapse" href="#estimationvalue" role="button" aria-expanded="false" aria-controls="estimationvalue">Submit</button>
+                    </div>
+                  </div>
+                  <div class="row border-top border-bottom align-items-center bg-light text-center px-2 py-3 border-top collapse" id="estimationvalue">
+                    <div class="col">
+                      <p class="m-0">Estimation value of your vehicle</p>
+                      </div>
+                      <div class="col-4 text-right">
+                        <p class="m-0"><i class="fa fa-inr"></i> 7 73 518*</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </section>
+            <!--===============trade-in start============--> 
+            
+            <!--===============finance option start============-->
+            <div class="col-md-12 border-bottom py-3">
+              <p class=""><strong>Would you like to opt finance?</strong></p>
+              <div class="form-check form-check-inline px-3" onClick="toggle_financeoption('hide')">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" checked value="option1">
+                <label class="form-check-label" for="inlineRadio4">No</label>
+              </div>
+              <div class="form-check form-check-inline px-3 " onClick="toggle_financeoption('show')">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio5" value="option2">
+                <label class="form-check-label" for="inlineRadio5">Yes</label>
+              </div>
+            </div>
+            <section class="p-0">
+              <div id="Fullpayment" class="col-md-12"></div>
+              <div id="FinanceOption" class="col-md-12" style="display:none;">
+                <section>
+                  <div class="row px-2">
+                    <div class="col-12 p-1 ">
+                      <p class="m-0 pt-3"><strong>Please select preferred finance</strong></p>
+                    </div>
+                    <div class="col-12 p-1">
+                      
+                      <ul class="nav nav-pills nav-fill financeTab py-3" id="financeLink" role="tablist">
+
+                        <li class="nav-item" role="presentation">
+                          <div class="form-check form-check-inline" id="standard-tab" data-bs-toggle="tab" data-bs-target="#standard" type="button" role="tab" aria-controls="standard" aria-selected="true">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadioStandard" checked value="option1">
+                            <label class="form-check-label" for="inlineRadioStandard">Standard</label>
+                          </div>
+                        </li>    
+
+                        <!-- <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="standard-tab" data-bs-toggle="tab" data-bs-target="#standard" type="button" role="tab" aria-controls="standard" aria-selected="true">Standard</button>
+                        </li> -->
+                        <li class="nav-item px-1" role="presentation">
+                          <div class="form-check form-check-inline" id="bullet-tab" data-bs-toggle="tab" data-bs-target="#bullet" type="button" role="tab" aria-controls="bullet" aria-selected="false">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadioBullet" checked value="option1">
+                            <label class="form-check-label" for="inlineRadioBullet">Bullet</label>
+                          </div>
+                          
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <div class="form-check form-check-inline" id="bullet-tab" data-bs-toggle="tab" data-bs-target="#bullet" type="button" role="tab" aria-controls="bullet" aria-selected="false">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadioBalloon" checked value="option1">
+                            <label class="form-check-label" for="inlineRadioBalloon">Balloon</label>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="financeTabContent">
+                        <div class="tab-pane fade show active" id="standard" role="tabpanel" aria-labelledby="standard-tab">
+                          <p>Standard EMI <span class="text-dark">offers you fixed installments over the period of your loan,steady monthly outflow upto 84 months.</span></p>
+                          <div class="row align-items-center">
+                            <div class="col"> Down Payment <br>
+                              <i class="fa fa-inr"></i> 22 45 984 <i class="   icon icon-ldx-information ml-1 "></i> </div>
+                            <div class="col">
+                              <input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+                            </div>
+                          </div>
+                          <div class="row align-items-center py-2">
+                            <div class="col"> Duration <br>
+                              7 Years</div>
+                            <div class="col">
+                              <input type="range" min="1" max="100" value="100" class="slider" id="myRange2">
+                            </div>
+                          </div>
+                          <div class="row align-items-center text-center py-2 border-top">
+                            <div class="col">
+                              <p class="m-0">Monthly EMI Payment</p>
+                              <h4 class="m-0 fs-7"><i class="fa fa-inr"></i> 1 03 158</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="bullet" role="tabpanel" aria-labelledby="bullet-tab">
+                          <p>The Bullet EMI <span class="text-dark">allows you to lower your regular EMIs by paying specified higher amounts at specified interval (Annually) during the loan period. An ideal plan if you are expecting an increase in your paying capacity at certain time intervals during the period of the loan, available for upto 60 months.</span></p>
+                          <div class="row align-items-center">
+                            <div class="col"> Down Payment <br>
+                              <i class="fa fa-inr"></i> 22 45 984 <i class="fa fa-question-circle ml-1"></i> </div>
+                            <div class="col">
+                              <input type="range" min="1" max="100" value="25" class="slider" id="myRange3">
+                            </div>
+                          </div>
+                          <div class="row align-items-center py-2">
+                            <div class="col"> Duration <br>
+                              5 Years</div>
+                            <div class="col">
+                              <input type="range" min="1" max="100" value="100" class="slider" id="myRange4">
+                            </div>
+                          </div>
+                          <div class="row align-items-center text-center py-2 border-top">
+                            <div class="col">
+                              <p class="m-0">Monthly EMI Payment</p>
+                              <h4 class="m-0 fs-7"><i class="fa fa-inr"></i> 1 12 524</h4>
+                            </div>
+                            <div class="col">
+                              <p class="m-0">Annual Bullet EMI</p>
+                              <h4 class="m-0 fs-7"><i class="fa fa-inr"></i> 4 50 095</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="balloon" role="tabpanel" aria-labelledby="balloon-tab">
+                          <p>The Balloon EMI <span class="text-dark">offers you fixed low installments over the period of your loan and a lump sum (Balloon) payment which is attached to the loan be made towards the end of the loan period, available from 36 months upto 60 months.</span></p>
+                          <div class="row align-items-center">
+                            <div class="col"> Down Payment <br>
+                              <i class="fa fa-inr"></i> 22 15 984 <i class="fa fa-question-circle ml-1"></i> </div>
+                            <div class="col">
+                              <input type="range" min="1" max="100" value="25" class="slider" id="myRange3x">
+                            </div>
+                          </div>
+                          <div class="row align-items-center py-2">
+                            <div class="col"> Duration <br>
+                              5 Years </div>
+                            <div class="col">
+                              <input type="range" min="1" max="100" value="100" class="slider" id="myRange4x">
+                            </div>
+                          </div>
+                          <div class="row align-items-center text-center py-2 border-top">
+                            <div class="col">
+                              <p class="m-0">Monthly EMI Payment</p>
+                              <h4 class="m-0 fs-7"><i class="fa fa-inr"></i> 1 18 723</h4>
+                            </div>
+                            <div class="col">
+                              <p class="m-0">Balloon EMI</p>
+                              <h4 class="m-0 fs-7"><i class="fa fa-inr"></i> 16 84 488</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </section>
+            <!--===============finance option end============-->
+            
+            <div class="col-md-12 border-bottom my-3 py-3 bg-success text-white">
+              <div class="row align-items-center">
+                <div class="col-4 ">
+                  <p class="m-0">Total amount due</p>
+                </div>
+                <div class="col-8 text-right">
+                  <p class="fs-4 m-0"><i class="fa fa-inr"></i> 85 62 329</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <p class="p-list"><strong>Availability</strong> <span class="text-muted">width 2-3 weeks</span></p>
+          <p class="p-list"><a href="javascript:void(0)"><strong>Detail specification</strong> <span class="text-muted"> <i class="icon-ldx-download fs-6"> </i></span></a></p> --> 
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="row fixed-bottom align-items-center" style="
+    max-width: 2000px;
+    margin: auto;
+">
+    <div class="col-lg-8 col-md-7"></div>
+    <div class="col-lg-4 col-md-5">
+      <div class="collapse border-top" id="terms1">
+        <div class="card card-body text-dark"> <small>Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</small> </div>
+      </div>
+      <div class="row align-items-center p-3 bg-white border-top">
+        <div class="col align-items-center">
+          <div class="row align-items-center">
+            <div class="col-3"> <a class="btn btn-light term-expand" data-bs-toggle="collapse" href="#terms1" role="button" aria-expanded="false" aria-controls="terms1" > <i class="icon-lr-configurator-cheveron-up fs-7"></i> </a> </div>
+            <div class="col">
+              <h3 class=""> <i class="fa fa-inr" aria-hidden="true"></i> <span>10 000</span> </h3>
+              <p class="text-dark m-0"><small>Reserve now with refundable* deposit.</small> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-block btn-primary" onclick="window.location.href='personal_details.html'">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ----------end of right section--------- --> 
+
+
+<!-- Modal customer -->
+<div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="customerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md " >
+    <div class="modal-content" style="background-color:#fff;">
+      <div class="modal-header text-center">
+        <h3 class="position-absolute mt-3 start-50 translate-middle">LOGIN</h3>
+        <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"><span class="icon-LR_Filter_Close"></span></button>
+      </div>
+      <div class="modal-body mt-3">
+        <o>If you already have an existing booking or want to view your las your Email ID. Below to generate an OTP (One Time Password).</o>
+        <div class="input-group mb-3 col-8 mx-auto">
+          <input type="text" class="form-control mt-3" placeholder="Enter Email Id" aria-label="EmailId" aria-describedby="basic-addon1">
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center " >
+            <button type="button" class="btn btn-primary text-center pl-5 pr-5">GENERATE OTP</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center"> <small class="">OR LOGIN WITH</small> </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center mt-2">
+            <button type="button" class="btn btn-primary socialicon"><i class="fa fa-facebook" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-primary socialicon"><i class="fa fa-apple" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-primary socialicon"><i class="fa fa-google" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal retail -->
+<div class="modal fade" id="customerModa2" tabindex="-1" aria-labelledby="customerLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered  modal-md">
+    <div class="modal-content" style="background-color:#fff;" >
+      <div class="modal-header text-center">
+        <h3 class="position-absolute mt-3 start-50 translate-middle">RETAILER LOGIN</h3>
+        <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"><span class="icon-LR_Filter_Close"></span></button>
+      </div>
+      <div class="modal-body mt-3">
+        <div class="input-group mb-2">
+          <input type="text" class="form-control mt-3" placeholder="Enter Maximizer ID" aria-label="EmailId" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control mt-3" placeholder="Enter Maximizer Password" aria-label="EmailId" aria-describedby="basic-addon1">
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center" >
+            <button type="button" class="btn btn-primary text-center w-50">LOGIN </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- location area -->
+
+<div class="modal fade" id="locationarea" tabindex="-1" aria-labelledby="customerLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color:#fff;">
+      <div class="modal-header text-center">
+        <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"><span class="icon-LR_Filter_Close"></span></button>
+      </div>
+      <div class="modal-body mt-3">
+        <h4>Please input city of your current residence.</h4>
+        <div class="input-group mb-2">
+          <input type="text" class="form-control mt-3" placeholder="Enter City Of Your Residence" aria-label="city" aria-describedby="basic-addon1">
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p>Disclaimer</p>
+            <p><span class="mr-1">
+              <input type="checkbox" id="agreepolicy" name="policy" value="agree">
+              </span>I Agree To The Terms And Condition
+              And Privacy Policy Of This Website</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!-- Option 1: Bootstrap Bundle with Popper --> 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script> 
+<script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity=""  crossorigin="anonymous"></script> 
+<script  src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"  integrity=""  crossorigin="anonymous"></script> 
+<script>
+$(function() {
+    $('.lr-select').select2({
+      minimumResultsForSearch: Infinity
+    });
+
+    
+});
+
+</script> 
+<script type="text/javascript">
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script> 
+<script type="text/javascript">
+  function on() {
+  document.getElementById("allvehicle").style.display = "block";
+}
+
+function off() {
+  document.getElementById("allvehicle").style.display = "none";
+}
+</script> 
+<script>  
+  function toggle_tradein(action_type)
+      {
+          if(action_type == 'show')
+              {
+                    $("#TradeIn").fadeIn();
+                  $("#NoThanks").fadeOut();
+                 // $("#estimationvalue").hide();
+              }
+          else {
+              $("#TradeIn").fadeOut();
+              $("#NoThanks").fadeIn();
+             // $("#estimationvalue").hide();
+          }
+      }
+      
+    </script> 
+<script>  
+  function toggle_financeoption(action_type)
+      {
+          if(action_type == 'show')
+              {
+                    $("#FinanceOption").fadeIn();
+                  $("#Fullpayment").fadeOut();
+              }
+          else {
+              $("#FinanceOption").fadeOut();
+              $("#Fullpayment").fadeIn();
+          }
+      }
+      
+    </script> 
+<script>
+      $('div').on("click",function(){
+      $(window).scrollTop(300);
+});
+    </script>
+    <script>
+      function overlayon() {
+        document.getElementById("allvehicle").style.display = "none";
+        document.getElementById("navbarSupportedContent").style.display = "none";
+        
+        if($('#overlay').css('display') == 'block')
+        {
+          document.getElementById("overlay").style.display = "none";
+         
+        }
+        else {
+          document.getElementById("overlay").style.display = "block";
+        }
+
+      }
+      
+      
+      function overlayoff() {
+        document.getElementById("overlay").style.display = "none";
+      }
+      </script>
+</body>
+</html>

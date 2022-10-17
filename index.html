@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>Land rover 3.0</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+<link href="css/lr_theme.css" rel="stylesheet">
+<link href="plugins/selectbox/customselect.css" rel="stylesheet">
+
+<!-- <link href="css/custom.css" rel="stylesheet" > -->
+<link href="css/landrover_fonts.css" rel="stylesheet">
+<link href="css/lr_icomoon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link href="verticalslide/verticalslide.css" rel="stylesheet">-->
+
+<link rel="preload" href="img/homepage.jpg" as="image">
+<link rel="preload" href="img/mobilehome.png" as="image">
+<link href="img/favicon-landrover.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="img/favicon-landrover-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+<link rel="stylesheet" href="plugins/onepagescroll/src/jquery.fsscroll.css">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<style>
+html, body {
+    height: 100%;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+.pagescroller, .sections, .section {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+.pagescroller_mobile, .sections, .section {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+.section_mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    transition: all .3s ease;
+}
+/* .section:first-child h1 {
+    animation: first-show .3s;
+  } */
+.section-box-img {
+    /* background: #409EFF; */
+    background-size: cover;
+    background-position: center;
+}
+/* .section h1.text-animate {
+    left: 0px;
+    transform: translateX(-100%);
+  } */
+
+.section-box {
+    position: absolute;
+    top: 55%;
+    left: 16%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+    /* background-color: rgba(255,255,255,0.9) !important; */
+    padding: 15px;
+    color: #fff;
+    text-align: left;
+    max-width: 393px;
+    z-index: 5;
+}
+.section-box >h1 {
+    font-weight: 400 !important;
+}
+[data-fs-scroll] .page.vertical .active {
+    height: 17px;
+}
+[data-fs-scroll] .page li {
+    width: 10px;
+    height: 14px;
+    background: rgba(255,255,255,.6);
+    border-radius: 50%;
+    margin: 5px 2px;
+    cursor: pointer;
+}
+.bounce-5 {
+    animation-name: bounce-5;
+    animation-timing-function: ease;
+}
+@keyframes bounce-5 {
+0% {
+transform: scale(1, 1) translateY(0);
+}
+10% {
+transform: scale(1.1, .9) translateY(0);
+}
+30% {
+transform: scale(.9, 1.1) translateY(-100px);
+}
+50% {
+transform: scale(1, 1) translateY(0);
+}
+57% {
+transform: scale(1, 1) translateY(-7px);
+}
+64% {
+transform: scale(1, 1) translateY(0);
+}
+100% {
+transform: scale(1, 1) translateY(0);
+}
+}
+/* @keyframes first-show {
+    0% {
+      left: 0px;
+      transform: translateX(-100%);
+    }
+    100% {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  } */
+
+  /* --------mobile-home-------- */
+  
+  
+.section-box-mobile {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+    padding: 15px;
+    color: #1e1e1e;
+    width: 100%;
+}
+.section-mob-img {
+    background: #409EFF;
+    background-size: cover;
+    background-position: center;
+}
+.section-mobile-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+    padding: 15px;
+    color: #1e1e1e;
+    width: 90%;
+}
+</style>
+<style>
+.overlay {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   background-image: -moz-linear-gradient( -174deg, rgba(107,58,46,0) 0%, rgba(12,38,60,0) 45%, rgba(10,38,60,0.01) 46%, rgba(3,11,18,0.33) 84%, rgba(0,0,0,0.65882) 100%);
+  background-image: -webkit-linear-gradient( -174deg, rgba(107,58,46,0) 0%, rgba(12,38,60,0) 45%, rgba(10,38,60,0.01) 46%, rgba(3,11,18,0.33) 84%, rgba(0,0,0,0.65882) 100%);
+  background-image: -ms-linear-gradient( -174deg, rgba(107,58,46,0) 0%, rgba(12,38,60,0) 45%, rgba(10,38,60,0.01) 46%, rgba(3,11,18,0.33) 84%, rgba(0,0,0,0.65882) 100%);
+    z-index: 2;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<nav class="navbar py-0 fixed-top navbar-expand-lg navbar-light bg-white" > 
+  <!-- ===========mobile-view rightnav start================ -->
+  <div class="mobile-nav d-block d-md-none row">
+    <table width="100%" border="0">
+      <tbody>
+        <tr>
+          <td width="52px"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon" style="
+         
+         margin-top: 8px;
+         font-size: 12px;
+     
+     "></span> </button></td>
+          <td width="60px"><a class="navbar-brand" href="javascript:void(0);"><img src="img/lr_logo2.png" width="70" height="" alt="landrover logo" style="
+         min-width: 70px;
+     "></a></td>
+          <td width="90%"><!-- <a onclick="on()" class="" href="javascript:void(0);"><h6>Vehicles</h6></a> --></td>
+          <td><!-- <button class="bg-border-none" aria-current="page"  data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-find-a-retailer"></span></btton> --></td>
+          <td><!-- <button class="bg-border-none" aria-current="page"  data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-phone"></span></button> --></td>
+          <td><button class="bg-border-none pr-3" type="button" id="dropdownMenuButton2x1" data-bs-toggle="dropdown" aria-expanded="false"> <span class="icon-ldx-login icon-size "></span> </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton2x1" style="
+         right: 0;
+         left: auto;
+     ">
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModal">Customer Login</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModa2">Retailer Login</a></li>
+            </ul></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="">
+      <div class="collapse navbar-collapse  border-top" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-0 mb-lg-0 nav-menu-link">
+          <li class="nav-item " id=""> <a onclick="on()"  class="nav-link  btn btn-outline-secondary " href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"> New Vehicle</a> </li>
+          <li class="nav-item " id=""> <a  class="nav-link  btn btn-outline-secondary " href="javascript:void(0);"> Pre-Owned Vehicle</a> </li>
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-light">
+          <li class="nav-item border-0"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-view-vehicles"></span> Land Rover</a> </li>
+          <li class="nav-item border-0"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-find-a-retailer"></span> Select a retailer </a> </li>
+          <li class="nav-item border-0"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-phone"></span> Contact Us </a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- ===========mobile-view rightnav end================ -->
+  <div class="container-fluid  d-none d-md-flex"> <a class="navbar-brand" href="javascript:void(0);"><img src="img/lr_logo2.png" width="94" height="" alt="landrover logo"/></a>
+    <div class="m-menu-title d-none">
+      <h2>Range Rover Evoque</h2>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item " id="vehicle-mobile-list"> <a onclick="on()" class="nav-link  btn btn-outline-secondary " href="javascript:void(0);"> New Vehicle</a> </li>
+        <li class="nav-item " id=""> <a  class="nav-link  btn btn-outline-secondary " href="javascript:void(0);"> Pre-Owned Vehicle</a> </li>
+      </ul>
+      <ul class="navbar-nav d-none d-md-flex mb-2 mb-lg-0 nav-item-right ">
+        <li class="nav-item"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" ><span class="icon icon-ldx-view-vehicles"></span> <small class="text-capitalize">Land Rover</small></a> </li>
+        <li class="nav-item"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-find-a-retailer"></span> <small class="text-capitalize">Select a retailer</small></a> </li>
+        <li class="nav-item"> <a class="nav-link btn btn-outline-secondary" aria-current="page" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#locationarea"><span class="icon icon-ldx-phone"></span> <small class="text-capitalize">Contact Us</small></a> </li>
+        <li class="nav-item dropdown ">
+          <div class="dropdown">
+            <button class="nav-link btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"> <span class="icon-ldx-login"></span><small class="text-capitalize">Login</small> </button>
+            <ul class="dropdown-menu dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModal">Customer Login</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#customerModa2">Retailer Login</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="allvehicle" onclick="off()" class="row allvehicle">
+  <ul class="vehicle_list border-right p-0">
+    <li>
+      <h6 class="dropdown-header bg-light">RANGE ROVER FAMILY <span class="float-end" ><i class="icon-lr-configurator-close fs-6"></i></span></h6>
+    </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_1.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER EVOQUE</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_2.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER VELAR</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_3.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER SPORT</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_4.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>RANGE ROVER</h6>
+        </div>
+      </div>
+      </a> </li>
+    <li>
+      <h6 class="dropdown-header bg-light">DISCOVERY FAMILY</h6>
+    </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_5.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>DISCOVERY SPORT </h6>
+        </div>
+      </div>
+      </a> </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" class="img-fluid" src="img/img_6.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>DISCOVERY </h6>
+        </div>
+      </div>
+      </a> </li>
+    <li>
+      <h6 class="dropdown-header bg-light">DEFENDER FAMILY</h6>
+    </li>
+    <li><a class="dropdown-item p-0" href="innerpage.html">
+      <div class="row d-flex align-items-center">
+        <div class="col-4"><img alt="" src="img/img_6.png" width="100%" height="100%" style="max-width:110px;"></div>
+        <div class="col-8 p-0">
+          <h6>DEFENDER </h6>
+        </div>
+      </div>
+      </a> </li>
+  </ul>
+</div>
+<div class="pagescroller d-none d-md-block" data-fs-scroll>
+  <div class="sections">
+    <div class="section section-box-img" style="background-image: url(img/range_rover_evogue_vehicle.jpg);">
+      <div class="overlay"></div>
+      <div class="section-box px-3">
+        <h1 class="py-2" >RANGE ROVER EVOQUE</h1>
+        <p class="">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 69 99 000 <br>
+          <!--          EMI From : <i class="fa fa-inr p-0 m-0"></i> 87 928--> 
+        </p>
+        <div class="btn-group-vertical gap-2 " role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-success text-left d-flex " onclick="window.location.href='innerpage.html'"><i class="icon-ldx-view-vehicles icon-size"> </i> New Vehicle</button>
+          <!-- <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='innerpage_finance.html'" >Finance Option</button> -->
+          <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='approved-vehicle.html'"><i class="icon-lr-custom-portal-approved-used icon-size"> </i> Pre-Owned Vehicle</button>
+        </div>
+        <!--        <p class="mb-0 mt-3"><small>*For 2.0 I Petrol R-Dynamic SE with standard features. Optional features will be charged extra.</small></p>--> 
+        <!--        <p class=""><small>* Detailed specification on next page</small></p>--> 
+      </div>
+      <span class=" bounce-5 icon-lr-configurator-cheveron-down fixed-bottom py-4"></span> </div>
+    <div class="section section3 section-box-img" style="background-image: url(img/defender_vehicle.jpg);">
+      <div class="overlay"></div>
+      <div class="section-box px-3">
+        <h1 class="py-2" >DEFENDER</h1>
+        <p class="">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 80 71 872 <br>
+          <!--          EMI From : <i class="fa fa-inr"></i>  1 01 583--> 
+        </p>
+        <div class="btn-group-vertical gap-2 " role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-success text-left d-flex  " onclick="window.location.href='innerpage.html'"><i class="icon-ldx-view-vehicles icon-size"> </i> New Vehicle</button>
+          <!-- <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='innerpage_finance.html'" >Finance Option</button> -->
+          <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='approved-vehicle.html'"><i class="icon-lr-custom-portal-approved-used icon-size"> </i> Pre-Owned Vehicle</button>
+        </div>
+        <!--        <p class="mb-0 mt-3"><small>*For 2.0 I Petrol R-Dynamic SE with standard features. Optional features will be charged extra.</small></p>--> 
+        <!--        <p class=""><small>* Detailed specification on next page</small></p>--> 
+      </div>
+      
+      <!--   <span class="desktop-arrow icon-lr-configurator-cheveron-down fixed-bottom py-4" style="
+    text-align: center;
+"></span> --> 
+    </div>
+    <div class="section section-box-img" style="background-image: url(img/range_rover_vehicle.jpg);">
+      <div class="overlay"></div>
+      <div class="section-box px-3">
+        <h1 class="py-2" >RANGE ROVER</h1>
+        <p class="">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 2 38 87 000 <br>
+          <!--          EMI From : <i class="fa fa-inr"></i>  2 99 490 --> 
+        </p>
+        <div class="btn-group-vertical gap-2 " role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-success text-left d-flex " onclick="window.location.href='innerpage.html'"><i class="icon-ldx-view-vehicles icon-size"> </i> New Vehicle</button>
+          <!-- <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='innerpage_finance.html'" >Finance Option</button> -->
+          <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='approved-vehicle.html'"><i class="icon-lr-custom-portal-approved-used icon-size"> </i> Pre-Owned Vehicle</button>
+        </div>
+        <!--        <p class="mb-0 mt-3"><small>*For 2.0 I Petrol R-Dynamic SE with standard features. Optional features will be charged extra.</small></p>--> 
+        <!--        <p class=""><small>* Detailed specification on next page</small></p>--> 
+      </div>
+      <span class=" bounce-5 icon-lr-configurator-cheveron-down fixed-bottom py-4" style="font-size: 20px;"></span> </div>
+    <div class="section section-box-img" style="background-image: url(img/rr_velar2.jpg);">
+      <div class="overlay"></div>
+      <div class="section-box px-3">
+        <h1 class="py-2">RANGE ROVER VELAR</h1>
+        <p class="">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 86 81 000 <br>
+          <!--          EMI From : <i class="fa fa-inr"></i> 1 09 105--> 
+        </p>
+        <div class="btn-group-vertical gap-2 " role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-success text-left d-flex " onclick="window.location.href='innerpage.html'"><i class="icon-ldx-view-vehicles icon-size"> </i> New Vehicle</button>
+          <!-- <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='innerpage_finance.html'" >Finance Option</button> -->
+          <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='approved-vehicle.html'"><i class="icon-lr-custom-portal-approved-used icon-size"> </i> Pre-Owned Vehicle</button>
+        </div>
+        <!--        <p class="mb-0 mt-3"><small>*For 2.0 I Petrol R-Dynamic SE with standard features. Optional features will be charged extra.</small></p>--> 
+        <!--        <p class=""><small>* Detailed specification on next page</small></p>--> 
+      </div>
+      <span class=" bounce-5 icon-lr-configurator-cheveron-down fixed-bottom py-4"></span> </div>
+    <div class="section section-box-img" style="background-image: url(img/discovery_sports_vehicle.jpg);">
+      <div class="overlay"></div>
+      <div class="section-box px-3">
+        <h1 class="py-2" style="font-weight: 800;">DISCOVERY SPORT</h1>
+        <p class="">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 69 31 000 <br>
+        </p>
+        <div class="btn-group-vertical gap-2 " role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-success text-left d-flex " onclick="window.location.href='innerpage.html'"><i class="icon-ldx-view-vehicles icon-size"> </i> New Vehicle</button>
+          <!-- <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='innerpage_finance.html'" >Finance Option</button> -->
+          <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='approved-vehicle.html'"><i class="icon-lr-custom-portal-approved-used icon-size"> </i> Pre-Owned Vehicle</button>
+        </div>
+        <!--        <p class="mb-0 mt-3"><small>*For 2.0 I Petrol R-Dynamic SE with standard features. Optional features will be charged extra.</small></p>--> 
+        <!--        <p class=""><small>* Detailed specification on next page</small></p>--> 
+      </div>
+      <span class=" bounce-5 icon-lr-configurator-cheveron-down fixed-bottom py-4"></span> </div>
+    <button type="button" class="btn btn-outline-success text-left d-flex" onclick="window.location.href='innerpage.html'" > Pre-Owned Vehicle</button>
+  </div>
+  <p class="text-center"><small>* Detailed specification on next page</small></p>
+</div>
+<div class="pagescroller_mobile d-md-none d-block" data-fs-scroll>
+  <div class="sections">
+    <div class="section section-mob-img" style="background-image: url(img/mobilehome.png);">
+      <h1 class="py-2 section-mobile-title" style="font-weight: 800;">RANGE ROVER EVOQUE</h1>
+      <div class="section-box-mobile">
+        <p class="text-left">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 69 99 000 <br>
+          <!--          EMI From : <i class="fa fa-inr p-0 m-0"></i> 87 928--> 
+        </p>
+        <div class="row text-left">
+          <div class="col-12 p-3 border-top" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="innerpage.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-ldx-view-vehicles icon-size" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> New Vehicle</span> </a> </h3>
+          </div>
+          <div class="col-12 p-3" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="approved-vehicle.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-lr-custom-portal-approved-used icon-size fs-6 p-1" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> Pre-Owned Vehicle</span> </a> </h3>
+          </div>
+        </div>
+      </div>
+      <span class="mobile-arrow text-dark icon-lr-configurator-cheveron-down fixed-bottom py-4"></span> </div>
+    <div class="section section-mob-img" style="background-image: url(img/m-defender.png);">
+      <h1 class="py-2 section-mobile-title" style="font-weight: 800;">DEFENDER</h1>
+      <div class="section-box-mobile">
+        <p class="text-left">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 80 71 872 <br>
+        </p>
+        <div class="row text-left">
+          <div class="col-12 p-3 border-top" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="innerpage.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-ldx-view-vehicles icon-size" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> New Vehicle</span> </a> </h3>
+          </div>
+          <div class="col-12 p-3" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="approved-vehicle.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-lr-custom-portal-approved-used icon-size fs-6 p-1" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> Pre-Owned Vehicle</span> </a> </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-mob-img" style="background-image: url(img/m-newrangerover.png);">
+      <h1 class="py-2 section-mobile-title" style="font-weight: 800;">RANGE ROVER</h1>
+      <div class="section-box-mobile">
+        <p class="text-left">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 2 38 87 000 <br>
+        </p>
+        <div class="row text-left">
+          <div class="col-12 p-3 border-top" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="innerpage.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-ldx-view-vehicles icon-size" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> New Vehicle</span> </a> </h3>
+          </div>
+          <div class="col-12 p-3" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="approved-vehicle.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-lr-custom-portal-approved-used icon-size fs-6 p-1" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> Pre-Owned Vehicle</span> </a> </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-mob-img" style="background-image: url(img/m-velar.png);">
+      <h1 class="py-2 section-mobile-title" style="font-weight: 800;">RANGE ROVER VELAR</h1>
+      <div class="section-box-mobile">
+        <p class="text-left">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 86 81 000 <br>
+        </p>
+        <div class="row text-left">
+          <div class="col-12 p-3 border-top" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="innerpage.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-ldx-view-vehicles icon-size" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> New Vehicle</span> </a> </h3>
+          </div>
+          <div class="col-12 p-3" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="approved-vehicle.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-lr-custom-portal-approved-used icon-size fs-6 p-1" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> Pre-Owned Vehicle</span> </a> </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-mob-img" style="background-image: url(img/m-rangeroversport.png);">
+      <h1 class="py-2 section-mobile-title" style="font-weight: 800;">DISCOVERY SPORT</h1>
+      <div class="section-box-mobile">
+        <p class="text-left">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 69 31 000 <br>
+        </p>
+        <div class="row text-left">
+          <div class="col-12 p-3 border-top" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="innerpage.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-ldx-view-vehicles icon-size" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> New Vehicle</span> </a> </h3>
+          </div>
+          <div class="col-12 p-3" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="approved-vehicle.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-lr-custom-portal-approved-used icon-size fs-6 p-1" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> Pre-Owned Vehicle</span> </a> </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-mob-img" style="background-image: url(img/m-NEWDISCOVERY.png);">
+      <h1 class="py-2 section-mobile-title" style="font-weight: 800;">DISCOVERY</h1>
+      <div class="section-box-mobile">
+        <p class="text-left">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 88 06 043 <br>
+        </p>
+        <div class="row text-left">
+          <div class="col-12 p-3 border-top" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="innerpage.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-ldx-view-vehicles icon-size" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> New Vehicle</span> </a> </h3>
+          </div>
+          <div class="col-12 p-3" style="border-bottom: 1px solid #c1c1c1;
+/* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="approved-vehicle.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+font-weight: bold;"> <i class="icon-lr-custom-portal-approved-used icon-size fs-6 p-1" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> Pre-Owned Vehicle</span> </a> </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-mob-img" style="background-image: url(img/m-rangeroversport.png);">
+      <h1 class="py-2 section-mobile-title" style="font-weight: 800;">RANGE ROVER SPORT</h1>
+      <div class="section-box-mobile">
+        <p class="">Ex-showroom price of 2.0 l Petrol R-Dynamic SE with standard features is <i class="fa fa-inr"></i> 1 64 29 000 <br></p>
+        <div class="row text-left">
+          <div class="col-12 p-3 border-top" style="border-bottom: 1px solid #c1c1c1;
+  /* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="innerpage.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+  font-weight: bold;"> <i class="icon-ldx-view-vehicles icon-size" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> New Vehicle</span> </a> </h3>
+          </div>
+          <div class="col-12 p-3" style="border-bottom: 1px solid #c1c1c1;
+  /* border-top: 1px solid #c1c1c1; */">
+            <h3 style="/* font-weight: 700; */"> <a href="approved-vehicle.html" class="card-link" style="/* color: #0c121c; */font-weight: bold;"> <span class="card-link  " style="color: #0c121c;color: #0c121c;
+  font-weight: bold;"> <i class="icon-lr-custom-portal-approved-used icon-size fs-6 p-1" style="font-size: 27px;padding-right: 27px;margin-bottom: -7px;position: relative;display: table-caption;font-weight: 800;"></i> Pre-Owned Vehicle</span> </a> </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal customer -->
+<div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="customerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md " >
+    <div class="modal-content" style="background-color:#fff;">
+      <div class="modal-header text-center">
+        <h3 class="position-absolute mt-3 start-50 translate-middle">LOGIN</h3>
+        <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"> 
+        <!-- <span class="icon-LR_Filter_Close"></span> --> 
+        </button>
+      </div>
+      <div class="modal-body mt-3">
+        <o>If you already have an existing booking or want to view your las your Email ID. Below to generate an OTP (One Time Password).</o>
+        <div class="input-group mb-3 col-8 mx-auto">
+          <input type="text" class="form-control mt-3" placeholder="Enter Email Id" aria-label="EmailId" aria-describedby="basic-addon1">
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center " >
+            <button type="button" class="btn btn-primary text-center pl-5 pr-5">GENERATE OTP</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center"> <small class="">OR LOGIN WITH</small> </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center mt-2">
+            <button type="button" class="btn btn-primary socialicon"><i class="fa fa-facebook" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-primary socialicon"><i class="fa fa-apple" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-primary socialicon"><i class="fa fa-google" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal retail -->
+<div class="modal fade" id="customerModa2" tabindex="-1" aria-labelledby="customerLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered  modal-md">
+    <div class="modal-content" style="background-color:#fff;" >
+      <div class="modal-header text-center">
+        <h3 class="position-absolute mt-3 start-50 translate-middle">RETAILER LOGIN</h3>
+        <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"> 
+        <!-- <span class="icon-LR_Filter_Close"></span> --> 
+        </button>
+      </div>
+      <div class="modal-body mt-3">
+        <div class="input-group mb-2">
+          <input type="text" class="form-control mt-3" placeholder="Enter Maximizer ID" aria-label="EmailId" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control mt-3" placeholder="Enter Maximizer Password" aria-label="EmailId" aria-describedby="basic-addon1">
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center" >
+            <button type="button" class="btn btn-primary text-center w-50">LOGIN </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- location area -->
+
+<div class="modal fade" id="locationarea" tabindex="-1" aria-labelledby="customerLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color:#fff;">
+      <div class="modal-header text-center">
+        <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"><span class="icon-LR_Filter_Close"></span></button>
+      </div>
+      <div class="modal-body mt-3">
+        <h4>Please input city of your current residence.</h4>
+        <div class="input-group mb-2">
+          <input type="text" class="form-control mt-3" placeholder="Enter City  Of Your  Residence" aria-label="city" aria-describedby="basic-addon1">
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p>Disclaimer</p>
+            <p><span class="mr-1">
+              <input type="checkbox" id="agreepolicy" name="policy" value="agree">
+              </span>I Agree To The Terms And Condition
+              And Privacy Policy Of This Website</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!-- Option 1: Bootstrap Bundle with Popper --> 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script> 
+<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="" crossorigin="anonymous"></script> 
+<script src="plugins/onepagescroll/src_touch/jquery.mobile-events.js"></script> 
+<script src="plugins/onepagescroll/src/jquery.fsscroll.js"></script> 
+<script type="text/javascript">
+  function on() {
+  document.getElementById("allvehicle").style.display = "block";
+}
+
+function off() {
+  document.getElementById("allvehicle").style.display = "none";
+}
+</script>
+</body>
+</html>

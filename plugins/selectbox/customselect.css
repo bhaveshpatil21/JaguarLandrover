@@ -1,0 +1,119 @@
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.select2-container--default .select2-selection--single {
+    border-radius: 50px;
+    background-color: #ececec;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.select2-results__option {
+    padding: 6px;
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: 11px;
+    border-bottom: 1px solid #cecece;
+}
+
+.select2-dropdown {
+    background-color: white;
+    /* border: 1px solid #aaa; */
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: -100000px;
+    width: 100%;
+    z-index: 1051;
+}
+
+.select2-dropdown {   
+    border: 0;
+}
+
+
+.select2-selection__arrow b:after {
+    content: "\e931";
+    /* content: "\e904"; */
+    font-size: 6px;
+    font-family: icomoon!important;
+    color: black;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b:after {
+    content: "\e931";
+    /* font-size: 9px; */
+    font-family: icomoon!important;
+    color: black;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b:after {content: "\e904";font-family: icomoon!important;font-size: 9px;}
+
+/*----commented-oldselect2-classes---*/
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: none;
+    border-width: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: none;
+    border-style: none;
+    border-width: none;
+    height: 0;
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    position: absolute;
+    top: 2px;
+    width: 0;
+}
+
+
+-----------in vewport action sticky--------
+
+https://stackoverflow.com/questions/46435455/change-css-of-inner-div-when-scroll-reaches-that-div
+
+https://codepen.io/clemt/pen/mKMGGx
+
+https://mastery.games/post/position-sticky/
+
+$(window).on('scroll',function() {
+    $('div').not(':in-viewport').html('');
+    $('div:in-viewport').html('hello');
+});
+
+https://stackoverflow.com/questions/65142776/css-position-sticky-overlaps-instead-of-pushing
+
+
+https://codepen.io/pen?&editors=110
+
+https://codepen.io/moritzjacobs/pen/zJyEjV
+
+===========color select box========
+.color-select {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    margin:auto;
+}
+
+.color-code-red {
+    background-color:red;
+}
+
+===========fancy tooltip reference link=======
+
+https://codepen.io/reiinii1/pen/aPGXEa

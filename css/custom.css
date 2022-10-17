@@ -1,0 +1,311 @@
+.ui-menu .ui-menu-item {
+   margin: 0;
+   cursor: pointer;    
+   width: 100% !important;
+   color: #333 !important;
+}
+
+.ui-menu .ui-menu-item > a {
+    
+   width: 100% !important;
+   color: #333 !important;
+}
+
+.lr-logo img {
+
+   max-width: 72px;
+    width: 100%;
+    display: block;
+    height: auto;
+
+}
+
+body:not(.isFullscreen) {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+
+
+.pageWrapper {
+	background-color: #ffffff;	
+}
+
+.bg-panel-content {
+	background-color: #dbdbdb;
+	min-height:150px;
+}
+
+
+
+
+.btn-outline-secondary {
+    border: none;
+	border-left: solid 1px #ccc;
+}
+
+
+
+.btn-light {
+    color: #212529;
+    background-color: white; 
+    border-color: #E9ECEC;
+}
+
+
+.btn-outline-secondary{
+    border-color: #eee;
+}
+
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
+    color: black;
+    background-color: #F2F2F2;
+    border-color: #eee;
+	border-bottom: none;
+
+}
+
+.btn-outline-secondary:hover {
+    color: black;
+    background-color: #F2F2F2;
+    border-color: #eee;
+	border-bottom: none;
+}
+
+
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+
+.card-header .collapsed > .fa-minus:before {
+    content: "\f067";
+}
+
+
+.card-title {
+    font-family: "lr_ot4","arial","helvetica",sans-serif;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+}
+
+
+/*  Auto complete custom css     */
+
+
+  .ui-autocomplete {
+    max-height: 250px;
+     max-width: 100% !important;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    z-index : 1010;
+    position:fixed;
+    padding-left: 0px !important;
+    padding-bottom: 5px !important;
+    margin-right: 40px !important;
+    /*border: 1px solid #bdbdbd !important;*/
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 250px;
+   /* position:fixed;*/
+  }
+  
+ .list-group-item {
+    position: relative !important;
+    display: block;
+   /* padding: 0.75rem 1.25rem !important;*/
+    padding: 10px 14px !important;
+    margin-bottom: -1px !important;
+    background-color: #fff !important;
+    border: 1px solid #bdbdbd !important;
+    text-align: left;
+    /*width: 93.2% !important;*/
+    
+}
+
+
+.list-group-item  a {
+text-decoration:none !important;
+background-color:transparent !important;
+border:0px !important;
+word-wrap: break-word !important;
+text-overflow: ellipsis !important;
+overflow-x: hidden !important;
+width: 10% !important;
+}
+
+ .list-group-item:hover {
+    background-color: #e6e6e6 !important;
+}
+
+ .ui-autocomplete li  .ui-state-focus {
+	text-decoration:none !important;
+  	background-color: #e6e6e6 !important;  	
+    	display: block;
+    	padding: 10px 14px !important;
+    	margin: -10px -14px !important;
+    	text-align: left;
+    	width: 100% !important;
+}
+
+@media screen and (max-width: 639px)
+{
+.ui-autocomplete {
+	max-height: 150px;
+	overflow-y: auto;
+    	overflow-x: hidden;
+	text-align: left !important;
+   	z-index : 1010;
+   	max-width: 85% !important;
+   	
+}
+
+.list-group-item {
+	padding-top: 10px  !important;
+	padding-right: 0px !important;
+	padding-bottom: 10px  !important;
+	padding-left: 14px  !important;
+	/*overflow-x: hidden;*/
+	/*margin-right: 0px !important;
+	margin: -10px -14px !important;
+	max-width: 100% !important;*/
+	max-width: 100% !important;
+}
+
+.ui-front{
+    z-index:9999 !important;
+}
+
+}
+
+
+
+
+
+
+/*    for UI Slider   */
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -.8em!important;;
+  margin-left: -.6em!important;;
+}
+
+.ui-slider .ui-slider-handle {
+  position: absolute!important;;
+  z-index: 2;
+  width: 2em!important;;
+  height: 2em!important;;
+  cursor: default;
+  -ms-touch-action: none;
+  touch-action: none;
+  border-radius: 50px;
+}
+
+.ui-slider-horizontal {
+  height: .5em !important;
+}
+.ui-stat-active {
+background-color:white !important;;
+}
+
+.ui-button .ui-stat-active:hover {
+background-color:white !important;;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+ /* border: 1px solid #989898 !important;;*/
+  background: #ccccc !important;;
+  font-weight: normal !important;;
+  color: #fff !important;;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, html .ui-state-disabled:hover, html .ui-state-disabled:active {
+  border: 1px solid #c5c5c5 !important;;
+  background: #f6f6f6 !important;;
+  font-weight: normal !important;;
+  color: #454545 !important;;
+}
+
+.ui-slider .ui-slider-handle:before {
+content: "\eb02";
+font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  padding: 6px;
+}
+
+
+#ui-id-1.ui-widget.ui-widget-content {
+   border: 0px solid #c5c5c5;
+   padding: 0px;
+   background: #ffffff00;
+}
+
+
+.carousel-caption h1, .carousel-caption .h1 {
+
+font-size: 38px;
+    letter-spacing: .05em;
+    line-height: 1;
+    font-weight: 700;
+
+}
+
+
+.btn-success1{
+    color:white;
+    background-color:#005A2B;
+   }
+
+.btn-success1:hover{
+    color:white;
+    }
+
+.btn-primary1{
+    color:white;
+    background-color:#0c121c;
+}
+
+.btn-primary1:hover{
+   color:black;
+   background-color:white;
+   border-color: #0c121c;
+}
+
+input[type=text]::-ms-clear {
+  display:none;
+}
+
+
+.carousel-caption p{
+    font-size: 14px;
+    padding-top: 4px;
+    font-weight: normal;
+    line-height: 1.2em;
+/*     letter-spacing: 1.36px; */
+    font-family: "lr_ot4","arial","helvetica",sans-serif;
+}
+
+
+img.arrow_right_white {
+    width: 20px;
+    height: auto;
+    padding-right: 5px;
+}
